@@ -1,0 +1,27 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Extract colors{% endblock %}
+{% include "headers.html" %}
+
+{% block content %}
+       <!-- Masthead-->
+        <header class="image" >
+            <div class="container px-4 px-lg-5 h-10">
+                <div class="row gx-4 gx-lg-5 h-10 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">The 10 most common colors in your image in hex format</h1>
+                        <hr class="divider" />
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 h-10 align-items-center justify-content-center text-center">
+                 <div class="col-lg-8 align-self-end">
+                        {% for color in colors %}
+                        <h1 class="text-white ">{{color}}</h1>
+                        <hr class="divider divider-light" />
+                        {% endfor %}
+                 </div>
+                 </div>
+
+            </div>
+        </header>
+{% endblock %}
+
